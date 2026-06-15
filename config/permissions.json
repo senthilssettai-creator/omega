@@ -1,0 +1,19 @@
+{
+  "rules": [
+    { "plugin": "*", "action": "read", "decision": "allow" },
+    { "plugin": "*", "action": "list", "decision": "allow" },
+    { "plugin": "*", "action": "search", "decision": "allow" },
+    { "plugin": "memory", "action": "*", "decision": "allow" },
+    { "plugin": "rag", "action": "*", "decision": "allow" },
+    { "plugin": "notes", "action": "*", "decision": "allow" },
+    { "plugin": "calendar", "action": "*", "decision": "allow" },
+    { "plugin": "database", "action": "query_readonly", "decision": "allow" },
+    { "plugin": "database", "action": "schema", "decision": "allow" },
+    { "plugin": "git", "action": "status", "decision": "allow" },
+    { "plugin": "git", "action": "diff", "decision": "allow" },
+    { "plugin": "git", "action": "log", "decision": "allow" },
+    { "plugin": "search", "action": "*", "decision": "allow" },
+    { "plugin": "api", "action": "request", "decision": "allow" },
+    { "plugin": "api", "action": "graphql", "decision": "allow" }
+  ]
+}

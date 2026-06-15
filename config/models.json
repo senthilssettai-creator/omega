@@ -1,0 +1,32 @@
+{
+  "planning": [
+    "nvidia/nemotron-3-ultra:free",
+    "nousresearch/hermes-3-405b-instruct:free",
+    "nex-agi/nex-n2-pro:free",
+    "openrouter/free"
+  ],
+  "research": [
+    "nex-agi/nex-n2-pro:free",
+    "nvidia/nemotron-3-super:free",
+    "qwen/qwen3-next-80b-a3b-instruct:free",
+    "openrouter/free"
+  ],
+  "coding": [
+    "qwen/qwen3-coder-480b-a35b:free",
+    "poolside/laguna-m.1:free",
+    "openai/gpt-oss-120b:free",
+    "openrouter/free"
+  ],
+  "fast": [
+    "google/gemma-4-26b-a4b:free",
+    "poolside/laguna-xs.2:free",
+    "meta-llama/llama-3.3-70b-instruct:free",
+    "openrouter/free"
+  ],
+  "long_context": [
+    "qwen/qwen3-coder-480b-a35b:free",
+    "nvidia/nemotron-3-ultra:free",
+    "nvidia/nemotron-3-super:free",
+    "openrouter/free"
+  ]
+}

@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omega-agent"
+version = "0.1.0"
+description = "OMEGA, an open-source autonomous terminal AI agent runtime."
+readme = "README.md"
+requires-python = ">=3.13"
+license = { text = "MIT" }
+authors = [{ name = "OMEGA Contributors" }]
+dependencies = [
+  "fastapi>=0.111",
+  "uvicorn[standard]>=0.30",
+  "typer>=0.12",
+  "rich>=13.7",
+  "pydantic>=2.7",
+  "sqlalchemy>=2.0",
+  "httpx>=0.27",
+  "python-dotenv>=1.0",
+  "pyyaml>=6.0",
+  "duckdb>=1.0",
+  "chromadb>=0.5",
+  "faiss-cpu>=1.8; platform_system != 'Windows'",
+  "opentelemetry-api>=1.25",
+  "opentelemetry-sdk>=1.25",
+  "redis>=5.0",
+  "celery>=5.4",
+  "playwright>=1.45",
+  "selenium>=4.22",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2",
+  "ruff>=0.5",
+  "mypy>=1.10",
+]
+documents = [
+  "pypdf>=4.2",
+  "openpyxl>=3.1",
+]
+media = [
+  "pillow>=10.4",
+  "pytesseract>=0.3",
+  "yt-dlp>=2024.7.9",
+]
+
+[project.scripts]
+omega = "omega.cli:app"
+
+[tool.setuptools.packages.find]
+include = ["omega*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

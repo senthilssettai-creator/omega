@@ -1,0 +1,22 @@
+name: daily-startup-intel
+description: Research competitors, store notes, and produce an execution report.
+schedule: "0 8 * * *"
+steps:
+  - name: recall-company-memory
+    type: plugin
+    plugin: rag
+    action: recall
+    arguments:
+      query: "startup competitors product strategy"
+      limit: 5
+  - name: market-research
+    type: goal
+    goal: "Research recent competitor and market signals for our startup and summarize risks, opportunities, and next actions."
+  - name: save-summary-note
+    type: plugin
+    plugin: notes
+    action: create
+    arguments:
+      title: "Daily startup intelligence"
+      body: "OMEGA generated a daily research run. Review the workflow result JSON for sources and agent summaries."
+      tags: ["startup", "research", "workflow"]
